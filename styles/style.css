@@ -1,0 +1,115 @@
+body {
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+}
+
+/* navigation */
+
+nav {
+    position: sticky;
+    top: 0;
+    width: 100%
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: transparent;
+}
+
+.nav-item {
+    list-style: none;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: black;
+    color: aliceblue;
+    transition: .4s ease-in-out;
+    letter-spacing: 3px;
+}
+
+.nav-item a.own-tab {
+    background-color: green;
+    z-index: 999;
+}
+
+
+.nav-item:first-child {
+    margin-right: auto;
+}
+
+nav a:hover {
+    color: black;
+    background-color: white;
+    transition:.3s ease-in-out;
+    font-weight: 600;
+}
+
+nav .logo {
+    background-color: red;
+}
+
+.nav-button {
+    background-color: pink;
+    color:black;
+}
+
+
+section {
+    height: 200em;
+    background-color: rgb(177, 177, 177);
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+    background-color: rgb(29, 28, 28);
+    padding: 60px 10%;
+}
+
+.footer-list {
+    list-style: none;
+}
+
+.footer-section {
+    width: 33%;
+}
+
+.footer-section h4 {
+    position: relative;
+    margin-bottom: 30px;
+    color: rgb(207, 121, 8);
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 22px;
+    border-bottom:  2px solid black;
+    letter-spacing: 1.5px;
+    margin-left: 1.8em;
+}
+
+.footer-list a {
+    display: block;
+    font-size: 20px;
+    text-transform: capitalize;
+    color:antiquewhite;
+    letter-spacing: 1px;
+}
+
+.footer-list p {
+    display: block;
+    font-size: 18px;
+    text-transform: capitalize;
+    color:antiquewhite;
+}

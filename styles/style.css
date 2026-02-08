@@ -22,7 +22,7 @@ nav {
     width: 100%;
     opacity: 0;
     transform: translateY(10px);
-    animation: fadeInUp 0.8s ease-out forwards;
+    animation: fadeInUp 1.8s ease-out forwards;
 }
 
 .navbar {
@@ -37,35 +37,45 @@ nav {
     text-decoration: none;
     padding: 10px;
     margin: 10px;
+    text-transform: capitalize;
+    border-radius: 8px;
 }
 
 .nav-item a {
     text-decoration: none;
     padding: 10px;
     margin: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: black;
+    letter-spacing: 0.5rem;
     color: aliceblue;
     transition: .4s ease-in-out;
     letter-spacing: 3px;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-item a.own-tab {
-    background-color: green;
+    background-color: #3898ec;
     z-index: 999;
 }
-
 
 .nav-item:first-child {
     margin-right: auto;
 }
 
-nav a:hover {
+.nav-item a:hover {
     color: black;
     background-color: white;
     transition:.3s ease-in-out;
     font-weight: 600;
 }
+
+.nav-item a:active {
+    transform: scale(0.95);
+}
+
 
 nav .logo {
     background-color: rgb(247, 37, 132);
@@ -117,6 +127,11 @@ nav .logo {
     color: rgb(27, 32, 33);
 }
 
+.header-list li::marker {
+    font-size: 12px;
+    color: rgb(238, 47, 255);
+}
+
 .homepage-content {
     display: flex;
     width: 100%;
@@ -136,7 +151,7 @@ nav .logo {
 }
 
 .left-content {
-    background-color: rgb(242, 242, 245);
+    background-color: rgb(236, 236, 236);
     padding: 2rem;
     letter-spacing: 2px;
     overflow: hidden;
@@ -168,18 +183,22 @@ nav .logo {
 
 .row,
 .row-reverse {
-  display: flex;
-  width: 100%;
-  min-height: 60vh;
-  gap: 2rem;
-  margin-bottom: 5rem;
+    display: flex;
+    width: 100%;
+    min-height: 60vh;
+    gap: 2rem;
+    margin-bottom: 5rem;
+    transform: translateY(40px);
+    animation: fadeContent 1s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
 }
 
 .info-content,
 .image-content {
     width: 50%;
     margin: 5rem 0;
-    border-radius: 5px;
+    border-radius: 10px;
     opacity: 0;
     transform: translateY(40px);
     animation: fadeContent 1s ease-out forwards;
@@ -188,10 +207,14 @@ nav .logo {
 }
 
 .info-content {
-    background-color: rgb(242, 242, 245);
+    background-color: rgb(252, 252, 255);
     padding: 2rem;
     letter-spacing: 2px;
     overflow: hidden;
+}
+
+.info-content p {
+    margin: 2em;
 }
 
 .about-section h2,
@@ -200,18 +223,28 @@ nav .logo {
 .beach-section h2,
 .travel-section h2,
 .zoo-section h2 {
+    margin: 2em;
     font-size: 4rem;
     text-align: center;
     letter-spacing: 3px;
     text-transform: capitalize;
 }
 
-.info-content p{
-    font-size: 18px;
+.info-content p {
+    font-size: 1.125rem;
+    font-weight: 200;
+    font-family: 'Clashdisplay';
+    color:rgb(27, 32, 33)
 }
 
-.info-content li{
+.info-content li {
     font-size: 18px;
+    padding: 0.5em 0;
+}
+
+.info-content li::marker {
+    font-size: 12px;
+    color: rgb(238, 47, 255);
 }
 
 .image-content img {
@@ -219,8 +252,37 @@ nav .logo {
     height: 100%;
     object-fit: cover;
     display: block;
+    border-radius: 10px;
 }
 
+.link-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    max-width: 20rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: rgb(247, 37, 132);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.link-button a {
+    text-decoration: none;
+    color: whitesmoke;
+    letter-spacing: 0.5rem;
+}
+
+.link-button:hover {
+    background-color: #3898ec;
+    transform: scale(1.05);
+}
+
+.link-button:active {
+    transform: scale(0.95);
+}
 
 /* footer */
 
@@ -259,6 +321,12 @@ footer {
     text-transform: capitalize;
     color:antiquewhite;
     letter-spacing: 1px;
+    transition: color 0.4s ease, transform 0.3s ease;
+    
+}
+
+.footer-list a:hover {
+    color: rgb(207, 121, 8);
 }
 
 .footer-list p {
@@ -266,6 +334,14 @@ footer {
     font-size: 18px;
     text-transform: capitalize;
     color:antiquewhite;
+}
+
+span {
+  display: block;
+  width: 80%;
+  height: 1px;
+  background-color: #ddd;
+  margin: 0 auto; /* centers it horizontally */
 }
 
 /* keyframes */

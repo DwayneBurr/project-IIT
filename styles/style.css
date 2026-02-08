@@ -50,7 +50,6 @@ nav {
     letter-spacing: 0.5rem;
     color: aliceblue;
     transition: .4s ease-in-out;
-    letter-spacing: 3px;
     font-weight: 600;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -79,6 +78,38 @@ nav {
 
 nav .logo {
     background-color: rgb(247, 37, 132);
+}
+
+.logo {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    height: 2rem;
+}
+
+.logo-text {
+    position: absolute;
+    opacity: 0;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    transition: opacity 0.4s ease;
+}
+
+.logo img {
+    transition: opacity 0.4s ease;
+    width: 10rem;
+    height: 3rem;
+}
+
+.logo:hover img {
+    opacity: 0;
+}
+
+.logo:hover .logo-text {
+    opacity: 1;
 }
 
 /* home */
@@ -349,7 +380,8 @@ span {
   margin: 0 auto;
 }
 
-p {
+p,
+h4 {
     text-transform: capitalize;
 }
 
